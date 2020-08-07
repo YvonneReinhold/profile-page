@@ -16,6 +16,8 @@ public class ProfileDataServiceImpl implements ProfileDataService {
     private ProfileDataRepository profileDataRepository;
 
     public ProfileData getProfileData() throws ProfileDataNotFoundException {
+        // for simplicity a hard coded Id is used :)
+        // also the entity is given directly to the caller
         return profileDataRepository.findById(1L).orElseThrow(() -> new ProfileDataNotFoundException());
     }
 
