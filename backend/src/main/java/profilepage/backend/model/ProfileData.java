@@ -1,4 +1,4 @@
-package hoval.profilepage.backend.model;
+package profilepage.backend.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

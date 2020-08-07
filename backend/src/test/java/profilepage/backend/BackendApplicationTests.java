@@ -1,4 +1,4 @@
-package hoval.profilepage.backend;
+package profilepage.backend;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

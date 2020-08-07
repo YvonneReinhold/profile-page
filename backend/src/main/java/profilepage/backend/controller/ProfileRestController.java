@@ -1,4 +1,4 @@
-package hoval.profilepage.backend.controller;
+package profilepage.backend.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,8 +17,8 @@ import javax.validation.Valid;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
-import hoval.profilepage.backend.model.ProfileData;
-import hoval.profilepage.backend.model.ProfileDataRepository;
+import profilepage.backend.model.ProfileData;
+import profilepage.backend.model.ProfileDataRepository;
 
 @RestController
 public class ProfileRestController {

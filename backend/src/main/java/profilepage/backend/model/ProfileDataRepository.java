@@ -1,4 +1,4 @@
-package hoval.profilepage.backend.model;
+package profilepage.backend.model;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

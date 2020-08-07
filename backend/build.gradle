@@ -4,7 +4,7 @@ plugins {
 	id 'java'
 }
 
-group = 'hoval.profile-page'
+group = 'profile-page'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 

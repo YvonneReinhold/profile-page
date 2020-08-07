@@ -1,4 +1,4 @@
-package hoval.profilepage.backend.controller;
+package profilepage.backend.controller;
 
 public class ProfileDataNotFoundException extends Exception {
 
