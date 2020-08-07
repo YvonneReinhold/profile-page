@@ -93,7 +93,8 @@ class ProfileCardForm extends Component {
 }
 
 ProfileCardForm.propTypes = {
-    profile: PropTypes.object.isRequired
+    profile: PropTypes.object.isRequired,
+    toggleEditMode: PropTypes.func.isRequired
 }
 
 export default ProfileCardForm
