@@ -2,11 +2,15 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types';
 import { Form, FormGroup, Label, Card, CardBody, CardText, Button, Input } from 'reactstrap';
 
+/**
+ * Show profile data in edit mode.
+ */
 class ProfileCardForm extends Component {
 
     constructor(props) {
         super(props)
     
+        // transfer all profile data from parent
         this.state = {
              name: props.profile.name,
              image: props.profile.image,
@@ -39,6 +43,12 @@ class ProfileCardForm extends Component {
         })
     }
 
+    /**
+     * Transfer new profile values back to parent
+     * and deactivate the edit mode.
+     * 
+     * @param {*} event 
+     */
     handleSubmit = (event) => {
         event.preventDefault()
         this.props.updateProfile(this.state.name, this.state.description, this.state.image, this.state.link)
@@ -63,11 +73,11 @@ class ProfileCardForm extends Component {
                             </FormGroup>
                             <FormGroup>
                                 <Label for='description'>Description</Label>
-                                <Input type='textarea' id='description' defaultValue={description} onChange={ this.handleDescriptionChange } />
+                                <Input type='textarea' id='description' defaultValue={this.state.description} onChange={ this.handleDescriptionChange } />
                             </FormGroup>
                             <FormGroup>
                                 <Label for='link'>Detail url</Label>
-                                <Input id='link' defaultValue={link} onChange={ this.handleLinkChange } />
+                                <Input id='link' defaultValue={this.state.link} onChange={ this.handleLinkChange } />
                             </FormGroup>
                         </CardText>
                         <div className="clearfix">

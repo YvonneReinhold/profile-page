@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types';
 import { Card, CardImg, CardBody, CardTitle, CardText, Button, CardLink } from 'reactstrap';
 
+/**
+ * Show profile data in readOnly mode.
+ */
 class ProfileCard extends Component {
 
     render() {
