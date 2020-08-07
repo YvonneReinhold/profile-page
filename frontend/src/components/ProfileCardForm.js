@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types';
-import { Form, FormGroup, Label, Card, CardBody, CardText, Button, Input } from 'reactstrap';
+import { Form, FormGroup, Label, Card, CardBody, Button, Input } from 'reactstrap';
 
 /**
  * Show profile data in edit mode.
@@ -58,11 +58,9 @@ class ProfileCardForm extends Component {
     render() {
         const {toggleEditMode} = this.props
         return (
-            <div>
             <Form onSubmit={this.handleSubmit}>
                 <Card>
                     <CardBody>
-                        <CardText>
                             <FormGroup>
                                 <Label for='name'>Full name</Label>
                                 <Input type='text' id='name' value={ this.state.name } onChange={ this.handleNameChange } />
@@ -79,7 +77,6 @@ class ProfileCardForm extends Component {
                                 <Label for='link'>Detail url</Label>
                                 <Input id='link' defaultValue={this.state.link} onChange={ this.handleLinkChange } />
                             </FormGroup>
-                        </CardText>
                         <div className="clearfix">
                             <Button type="submit" color="success" className="float-right" style={{ margin: '10px' }}>Save</Button>
                             <Button className="float-right" style={{ margin: '10px' }} onClick={toggleEditMode}>Cancel</Button>
@@ -87,7 +84,6 @@ class ProfileCardForm extends Component {
                     </CardBody>
                 </Card>
             </Form>
-            </div>
         )
     }
 }
