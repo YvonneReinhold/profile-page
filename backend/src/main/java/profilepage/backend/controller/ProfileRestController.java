@@ -1,5 +1,6 @@
 package profilepage.backend.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
@@ -18,29 +19,24 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import profilepage.backend.model.ProfileData;
-import profilepage.backend.model.ProfileDataRepository;
+import profilepage.backend.service.ProfileDataService;
 
 @RestController
 public class ProfileRestController {
 
-	private ProfileDataRepository profileDataRepository;
+	@Autowired
+	private ProfileDataService profileDataService;
 
-	public ProfileRestController(ProfileDataRepository profileDataRepository) {
-		this.profileDataRepository = profileDataRepository;
-	}
-	
 	@GetMapping("/profile")
 	public ProfileData getProfileData() throws ProfileDataNotFoundException {
-		return profileDataRepository.findById(1L).orElseThrow(() -> new ProfileDataNotFoundException());
+		return profileDataService.getProfileData();
 	}
 	
 	@PutMapping("/profile")
 	public ResponseEntity<Void> updateProfileData(@Valid @RequestBody ProfileData newProfileData) {
-
-		if ( profileDataRepository.findById(newProfileData.getId()).isEmpty() ) {
+		if ( profileDataService.updateProfileData(newProfileData) == null ) {
 			return ResponseEntity.notFound().build();
 		}
-		profileDataRepository.save(newProfileData);
 		return ResponseEntity.ok().build();		
 	}
 
