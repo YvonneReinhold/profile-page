@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.2;
+}
+
+.main-area {
+  width: 400px;
+  background-color: '#f4f4f4';
+  padding: 10px;
+}
+.card-title {
+  font-size: larger;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+a {
+  text-decoration: none;
+  font-size: smaller;
+  font-weight: bold;
+}
