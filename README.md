@@ -15,7 +15,7 @@ The project consists of a backend and a frontend part. The backend is a Spring B
 ## Run prebuilt binary
 
 To run the binary you need Java Runtime 11 or higher.
-1. Choose a release from the [releases page](releases/).
+1. Choose a release from the [releases page](https://github.com/YvonneReinhold/profile-page/releases).
 1. Download the jar file.
 1. You can run the executable jar with `java -jar profile-page.jar`.
 1. Open [http://localhost:8080/](http://localhost:8080/) in a web browser to access the application.
@@ -47,6 +47,6 @@ To build a release follow the steps:
 1. Build the backend
     - change to directory [backend](backend/)
     - execute `./gradlew build`
-1. The executable jar file can be found in [build/libs](backend/build/libs).
+1. The executable jar file can be found in `build/libs`.
 1. You can run the executable jar with `java -jar profile-page.jar`.
 1. Open [http://localhost:8080/](http://localhost:8080/) in a web browser to access the application.
