@@ -8,6 +8,10 @@ group = 'profile-page'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
+bootJar {
+   archiveFileName = "profile-page.jar"
+}
+
 configurations {
 	compileOnly {
 		extendsFrom annotationProcessor
